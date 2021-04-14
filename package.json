@@ -1,0 +1,26 @@
+{
+  "name": "spdy-braidify-heisenbug",
+  "version": "1.0.0",
+  "description": "Minimum example of spdy + braidify subscribe heisenbug",
+  "main": "index.js",
+  "repository": "https://github.com/canadaduane/spdy-braidify-heisenbug",
+  "author": "Duane Johnson",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "braidify": "0.1.16",
+    "cors": "2.8.5",
+    "express": "4.17.1",
+    "spdy": "4.0.2"
+  },
+  "devDependencies": {
+    "devcert-cli": "^1.0.0"
+  },
+  "scripts": {
+    "devcert": "devcert generate localhost",
+    "start": "node index.js",
+    "start-debug": "node index.js",
+    "subscribe": "curl -H'Subscribe:keep-alive' https://localhost:3000",
+    "test": "node test.js"
+  }
+}
